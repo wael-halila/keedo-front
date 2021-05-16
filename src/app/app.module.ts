@@ -9,6 +9,7 @@ import { TemplateComponent } from './components/template/template.component';
 import { ForumComponent } from './components/forum/forum.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PostComponent } from './components/post/post.component';
 
 
 
@@ -19,7 +20,8 @@ import { HeaderComponent } from './components/header/header.component';
     TemplateComponent,
     ForumComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
