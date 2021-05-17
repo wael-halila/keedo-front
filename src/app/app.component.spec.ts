@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'keedoFront'`, () => {
+  it(`should have as title 'KinderTnFront'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('keedoFront');
+    expect(app.title).toEqual('KinderTnFront');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('keedoFront app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('KinderTnFront app is running!');
   });
 });
