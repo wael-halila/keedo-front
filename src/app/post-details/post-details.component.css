@@ -1,3 +1,7 @@
+h3 {color: #b9dd31;
+  font-size: 2.8rem;
+  padding-bottom: 35px;}
+
 section {
   display: table;
 }
@@ -29,4 +33,3 @@ section {
   justify-content: center;
   width: 120px;
 }
-

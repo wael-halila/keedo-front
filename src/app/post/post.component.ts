@@ -16,8 +16,48 @@ export class PostComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.reloadData();
 
+  }
 
-}}
+  reloadData() {
+    this.post = this.postService.getpostsList();
+    this.getPosts();
+  }
+  deletePost(id: number ) {
+    this.postService.deletePost(id)
+      .subscribe(
+        data => {
+          console.log(data);
+          this.reloadData();
+        });
+  }
+  getPosts(){
+    this.postService.getPosts().subscribe((data: Post[]) => {
+      console.log(data);
+      this.posts = data;
+    });
+
+  }
+  deletePostRef(){
+    this.postService.deletePostref()
+      .subscribe(
+        data => {
+          console.log(data);
+          this.reloadData();
+        },
+        error => console.log(error));
+  }
+  Search() {
+    if (this.typee !== '' ){
+      this.posts = this.posts.filter(res => {
+        return res.type.toLowerCase().match(this.typee.toLowerCase());
+      });
+    }else if (this.typee === '') {
+      this.ngOnInit();
+    }
+  }
+
+}
 
 

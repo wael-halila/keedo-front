@@ -1,0 +1,32 @@
+<div class="card ">
+  <div class="card-header">
+    <table class="table table-striped">
+      <thead>
+
+      <th>Id</th>
+      <th>mot</th>
+      <th>Subject Id</th>
+      <th>Poster</th>
+
+      <th></th>
+
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let co of comments">
+        <td>{{co.id}}</td>
+        <td>{{co.mot}}</td>
+        <td>{{co.subject.id}}</td>
+        <td>{{co.subject.poster}}</td>
+        <td>
+          <button mat-raised-button color="warn" type="submit" routerLink="/ad" >add a Comment</button>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+
+</div>

@@ -1,0 +1,11 @@
+
+
+  <div class="form-row">
+
+    <div class="col">
+      <input class="form-control"  placeholder="you'r comment"  [(ngModel)]="pcomment.mot" >
+    </div>
+  </div>
+
+  <button mat-raised-button color="accent" type="submit" (click)="addcomment(1)"name="mot" id="mot">Send</button>
+  <button mat-raised-button color="primary" type="submit" routerLink="/comment" >Back</button>

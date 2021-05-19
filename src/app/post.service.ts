@@ -17,6 +17,23 @@ export class PostService {
   constructor(private http: HttpClient) {
   }
 
+  getPosts(): Observable<Post[]> {
+    return this.http.get<Post[]>(this.baseUrl);
+  }
 
+  createPost(post: Post){
+    return this.http.post <Post> (this.baseUrl2, post);
+  }
+
+  deletePost(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl3}/${id}`, { responseType: 'text' });
+  }
+
+  deletePostref(): Observable<any> {
+    return this.http.delete(this.baseUrl4);
+  }
+  getpostsList(): Observable<any> {
+    return this.http.get(`${this.baseUrl}`);
+  }
 
 }

@@ -1,0 +1,64 @@
+<section>
+<div id="breadcrumbs" class="section-block-wrapper">
+  <div class="container">
+
+    <div class="card">
+      <h3 class="text-center">Posts List</h3>
+
+      <button (click)="deletePostRef()" class="btn btn-light"><i class="fa fa-refresh"></i>     refresh and delete post <i class="fa fa-trash"></i></button>
+      <div class="card-body">
+
+        <div style="text-align: right;" class="icon_search hidden-sm hidden-xs">
+          <div class="icon_search hidden-sm hidden-xs">
+            <a class="btnopen" ><i class="fa fa-search"></i></a>
+          </div>
+          <div class="input_search">
+            <input  type="text" placeholder="Search..." [(ngModel)]="typee" (input)="Search()">
+            <a class="btnclose" >×</a>
+            <a class="btnsearch" ><i class="fa fa-search"></i></a>
+          </div>
+        </div>
+
+
+
+
+        <table class="table table-striped">
+          <thead>
+
+          <th>Id</th>
+          <th>type</th>
+          <th>title</th>
+          <th>poster</th>
+          <th>description</th>
+          <th>creationDate</th>
+          <th></th>
+
+          </thead>
+          <tbody>
+
+          <tr *ngFor="let post of posts;let i = index">
+            <td>{{post.id}}</td>
+            <td>{{post.type}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.poster}}</td>
+            <td>{{post.description}}</td>
+            <td>{{post.creation_date}}</td>
+            <td>
+            <button mat-raised-button color="warn" type="submit" routerLink="/comment" >Comment</button>
+            </td>
+            <td>
+              <div class="example-button-container">
+                <button mat-fab color="primary"(click)="deletePost(post.id )" >
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </div>
+            </td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
