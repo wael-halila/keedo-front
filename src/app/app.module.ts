@@ -67,7 +67,7 @@ import { KindergartenComponent } from './kindergarten/kindergarten.component';
 
 // external
 
-import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -145,7 +145,6 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
     HttpClientModule,
     FormsModule
   ],
