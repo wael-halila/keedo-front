@@ -61,6 +61,18 @@ import {OverlayModule} from '@angular/cdk/overlay';
 import { CommentsComponent } from './comments/comments.component';
 import { AddclaimComponent } from './addclaim/addclaim.component';
 import { KindergartenComponent } from './kindergarten/kindergarten.component';
+
+
+import { interceptorProvider } from './interceptors/prod-interceptor.service';
+
+
+// external
+
+import { ToastrModule } from 'ngx-toastr';
+import { LoginComponent } from './auth/login.component';
+import { RegistroComponent } from './auth/registro.component';
+import { MenuComponent } from './menu/menu.component';
+import { IndexComponent } from './index/index.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,6 +88,11 @@ import { KindergartenComponent } from './kindergarten/kindergarten.component';
     ClaimComponent,
     AddclaimComponent,
     KindergartenComponent,
+    AppComponent,
+    LoginComponent,
+    RegistroComponent,
+    MenuComponent,
+    IndexComponent,
   ],
   imports: [
     BrowserModule,
@@ -132,8 +149,14 @@ import { KindergartenComponent } from './kindergarten/kindergarten.component';
     OverlayModule,
     PortalModule,
     ScrollingModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
