@@ -63,16 +63,12 @@ import { AddclaimComponent } from './addclaim/addclaim.component';
 import { KindergartenComponent } from './kindergarten/kindergarten.component';
 
 
-import { interceptorProvider } from './interceptors/prod-interceptor.service';
 
 
 // external
 
 import { ToastrModule } from 'ngx-toastr';
-import { LoginComponent } from './auth/login.component';
-import { RegistroComponent } from './auth/registro.component';
-import { MenuComponent } from './menu/menu.component';
-import { IndexComponent } from './index/index.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -89,10 +85,7 @@ import { IndexComponent } from './index/index.component';
     AddclaimComponent,
     KindergartenComponent,
     AppComponent,
-    LoginComponent,
-    RegistroComponent,
-    MenuComponent,
-    IndexComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -156,7 +149,7 @@ import { IndexComponent } from './index/index.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [interceptorProvider],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
