@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {ClaimComponent} from './claim/claim.component'
 import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -70,7 +70,8 @@ import { CommentsComponent } from './comments/comments.component';
     ChatComponent,
     PostDetailsComponent,
     SelectComponent,
-    CommentsComponent
+    CommentsComponent,
+    ClaimComponent,
   ],
   imports: [
     BrowserModule,
