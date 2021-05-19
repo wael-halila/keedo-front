@@ -59,6 +59,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 import { CommentsComponent } from './comments/comments.component';
+import { AddclaimComponent } from './addclaim/addclaim.component';
+import { KindergartenComponent } from './kindergarten/kindergarten.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,6 +74,8 @@ import { CommentsComponent } from './comments/comments.component';
     SelectComponent,
     CommentsComponent,
     ClaimComponent,
+    AddclaimComponent,
+    KindergartenComponent,
   ],
   imports: [
     BrowserModule,

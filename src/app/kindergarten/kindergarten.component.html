@@ -1,0 +1,116 @@
+
+<div class="container" >
+  <div class = "card" >
+    <br>
+    <br>
+    <h3 class ="text-center"> Kinder's List</h3>
+    <div class = "card-body" >
+      <table class="table table-bordered h6">
+
+        <thead>
+
+        <th>Id</th>
+        <th>name</th>
+        <th>mail</th>
+
+
+        <th>is_blocked</th>
+        <th>blockDate</th>
+        <th>unBlockDate</th>
+        <th>telNum</th>
+
+        </thead>
+        <tbody>
+        <tr *ngFor= "let kindergarten of kinder ">
+          <td>{{kindergarten.id}}</td>
+          <td>{{kindergarten.name}}</td>
+          <td>{{kindergarten.mail}}</td>
+          <td>{{kindergarten.blocked}}</td>
+          <td>{{kindergarten.blockDate}}</td>
+          <td>{{kindergarten.unBlockDate}}</td>
+          <td>{{kindergarten.telNum}}</td>
+
+
+        </tr>
+
+
+        </tbody>
+
+      </table>
+
+
+
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<!--njareb -->
+
+
+
+
+<section id="about_stories" class="about_stories">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-title">Block & Unblock Subscription</h2>
+      </div>
+    </div>
+    <div class="row arrows_red">
+      <div id="stories_owl" class="owl-carousel owl-theme">
+        <div class="item col-md-12">
+        </div>
+        <div class="item col-md-12">
+          <div class="s_red_block all_color wow fadeInUp">
+            <form #f="ngForm" (ngSubmit)="onSubmit()" >
+              <div>
+                <div class="form-row">
+                  <div class="col">
+                    <input style="width: 300px" type="text" class="form-control" id="id" placeholder="Id" [(ngModel)]="kd.id" required="required">
+                  </div>
+                </div>
+                <br>
+                <div>
+                  <div class="col">
+                    <input type="text"  style="width: 300px" class="form-control" id="name1" required [(ngModel)]="kd.name" name="name" placeholder="name">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <button type="submit" value="Submit" (click)="unblocksubscription(kd.name)" class="btn btn-success">UNBlock</button>
+            </form>
+          </div>
+        </div>
+
+
+        <div class="item col-md-12">
+          <div class="s_margin_block all_color wow fadeInUp">
+            <form #f="ngForm" (ngSubmit)="onSubmit()" >
+              <div>
+                <div class="form-row">
+                  <div class="col">
+                    <input style="width: 300px" type="text" class="form-control" id="id1" placeholder="Id" [(ngModel)]="kd.id" required="required">
+                  </div>
+                </div>
+                <br>
+                <div>
+                  <div class="col">
+                    <input type="text"  style="width: 300px" class="form-control" id="name" required [(ngModel)]="kd.name" name="name" placeholder="name">
+                  </div>
+                </div>
+              </div>
+              <br>
+              <br>
+              <button type="submit" value="Submit" (click)="blockSubscription(kd.name)" class="btn btn-success">Block</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

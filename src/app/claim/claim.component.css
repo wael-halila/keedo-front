@@ -1,0 +1,13 @@
+.btn-unique {
+  color: #fff;
+  background-color: #ff5d86 !important;
+  width: 200px;
+}
+.btn {
+  min-width: 200px;
+  font-family  :fa5-proxima-nova,"Helvetica Neue";
+}
+.text-center{
+  font-family: 'Boogaloo', cursive;
+  font-size: 35px;
+}

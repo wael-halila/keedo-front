@@ -1,0 +1,8 @@
+.text-center{
+  font-family: 'Boogaloo', cursive;
+  font-size: 35px;
+}
+.btn:not(:disabled):not(.disabled){
+  background-color:#c7254e;
+}
+

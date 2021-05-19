@@ -1,0 +1,75 @@
+
+
+<div id="breadcrumbs" class="section-block-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ol class="breadcrumb">
+          <li><a href="claim">The List of Claims</a></li>
+          <li><a routerLink="addclaim" routerLinkActive="active">Add Claim</a></li>
+
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="send_us">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="leave_reply">
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h3 class="title">Send Us a Claim</h3>
+            <p class="description">if u have any problem or complain you can inform us </p>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+
+        <form #f="ngForm" (ngSubmit)="onSubmit()" >
+          <div class="form-row">
+            <div class="col">
+              <input style="width: 600px" type="text" class="form-control" id="id" placeholder="Id" [(ngModel)]="claim.id" required="required">
+            </div>
+            <div class="col">
+              <input type="datetime-local" class="form-control" id="dateClaim" required [(ngModel)]="claim.dateClaim" name="dateClaim">
+            </div>
+          </div>
+          <br>
+          <div class="container">
+            <div class="row">
+
+              <label id="example-radio-group-label"  style="color: #880e4f"  >
+                Which Category your Claim is ? </label>
+
+              <br>
+              <div class="col-sm-10 ">
+                <mat-radio-group name="typeClm" aria-label="Select an option" [(ngModel)]="claim.category" ngModel #category="ngModel" class="ml-3">
+                  <br><mat-radio-button  value="EDUCATION" class="example-radio-button" required>EDUCATION</mat-radio-button><br>
+                  <br><mat-radio-button class="example-radio-button" value="RESTAURATION" required>RESTAURATION</mat-radio-button><br>
+                  <br><mat-radio-button  value="AUTRE" class="example-radio-button" required>AUTRE</mat-radio-button><br>
+                  <br> <mat-radio-button  value="ACTIVITY" class="example-radio-button" required>ACTIVITY</mat-radio-button><br>
+                </mat-radio-group>
+              </div>
+              <br>
+            </div>
+          </div>
+          <br>
+
+          <textarea id="message" name="message" rows="4" placeholder="Text" [(ngModel)]="claim.mot" required class="form-control"></textarea>
+          <br>
+          <br>
+          <br>
+          <button type="submit" value="Submit" class="btn btn-success">Send</button>
+        </form>
+
+        <div id="messegeResult" class="messegeResult">
+          <p>The message was successfully sent</p>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
